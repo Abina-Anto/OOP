@@ -5,7 +5,7 @@ class myclass{
 		System.out.println("value of a:"+a);
 	}
 	void display(int a,double b){
-	System.out.println("value of a and b"+a+"and"+b);
+	System.out.println("value of a and b "+a +" and "+b);
 	}
 }
 public class mainclass{
