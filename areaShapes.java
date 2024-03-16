@@ -20,7 +20,7 @@ class myClass{
 		System.out.println("Area of triangle:"+a1);
 	}
 }
-public class areaShapes{
+class areaShapes{
 	public static void main(String args[]){
 		int s,l,b,ch,wish;
 		double r,h,b1;
