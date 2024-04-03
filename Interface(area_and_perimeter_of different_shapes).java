@@ -1,12 +1,13 @@
 import java.util.*;
-interface prototype{
+
+interface Shape{
 void circle();
 void rectangle();
 void square();
 void triangle();
 }
 
-class CircleCompute implements prototype{
+class CircleCompute implements Shape{
 Scanner inp=new Scanner(System.in);
 public void circle(){
 double radius;
@@ -22,7 +23,8 @@ public void triangle(){}
 public void square(){}
 }
 
-class RectCompute implements prototype{
+
+class RectCompute implements Shape{
 Scanner inp=new Scanner(System.in);
 public void rectangle(){
 double length,breadth;
@@ -40,18 +42,21 @@ public void triangle(){}
 public void square(){}
 }
 
-class TriangleCompute implements prototype{
+
+class TriangleCompute implements Shape{
 Scanner inp=new Scanner(System.in);
 public void triangle(){
-double height,breadth,hypotenuse;
-System.out.println("Enter the breadth of the triangle:");
-breadth=inp.nextDouble();
+double base,height,a,b;
+System.out.println("Enter the base of the triangle:");
+base=inp.nextDouble();
 System.out.println("Enter the height of the triangle:");
 height=inp.nextDouble();
-System.out.println("Enter the hypotenuse of the triangle:");
-hypotenuse=inp.nextDouble();
-double triangle_area=0.5*breadth*height;
-double triangle_peri=height+breadth+hypotenuse;
+System.out.println("Enter the first side of the triangle:");
+a=inp.nextDouble();
+System.out.println("Enter the second side of the triangle:");
+b=inp.nextDouble();
+double triangle_area=0.5*base*height;
+double triangle_peri=a+b+base;
 System.out.println("Area of triangle="+triangle_area);
 System.out.println("Perimeter of triangle="+triangle_peri);
 }
@@ -60,7 +65,8 @@ public void square(){}
 public void rectangle(){}
 }
 
-class SquareCompute implements prototype{
+
+class SquareCompute implements Shape{
 Scanner inp=new Scanner(System.in);
 public void square(){
 double length;
@@ -76,6 +82,7 @@ public void rectangle(){}
 public void circle(){}
 }
 
+
 public class Interface{
 public static void main(String args[]){
 CircleCompute obj=new CircleCompute();
@@ -85,7 +92,7 @@ SquareCompute obj4=new SquareCompute();
 Scanner inp=new Scanner(System.in);
 do
 {
-System.out.println("\n\n\n___MENU___\n1.Area and Perimeter of Circle.\n2.Area and perimeter of rectangle.\n3.Area and perimeter of triangle\n4.Area and perimeter of square\n5.Exit");
+System.out.println("\n___MENU___\n1.Area and Perimeter of Circle.\n2.Area and perimeter of rectangle.\n3.Area and perimeter of triangle\n4.Area and perimeter of square\n5.Exit");
 System.out.print("Enter your choice:");
 int ch = inp.nextInt();
 switch (ch) {
@@ -102,4 +109,8 @@ break;
 }
 }while(true);}
 }
+
+
+
+
 
